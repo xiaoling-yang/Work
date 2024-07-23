@@ -1,0 +1,126 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 8852394@qq.com, 11, LIC=LJWP0-B1II3-QIA5M-XLX3X-FK8D6-77BQV
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.39.0.0
+Toolchain Path:  D:\SoftWare\MDK\ARM\ARMCOMPLIER506\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      CMSIS_AGDI.dll V1.33.16.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+D:\¹¤×÷\current\Car_Terminal_7_22\MDK-ARM\Car_Terminal.uvprojx
+Project File Date:  07/23/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\SoftWare\MDK\ARM\ARMCOMPLIER506\Bin'
+Rebuild target 'Car_Terminal'
+assembling startup_stm32f407xx.s...
+compiling main.c...
+../Core/Inc/TX510.h(42): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Src/main.c(200): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  		HAL_UART_Receive(&huart6,buf_recv,sizeof(buf_recv),10);
+../Core/Src/main.c(214): warning:  #181-D: argument is incompatible with corresponding format string conversion
+  					sscanf(str1,"%d",&distance);
+../Core/Src/main.c(380): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		uint8_t bac=(uint8_t)(0.21*alcoholPpm);//
+../Core/Src/main.c: 4 warnings, 0 errors
+compiling AES128.c...
+..\Core\Src\AES128.c(24): warning:  #177-D: variable "cg_Nc"  was declared but never referenced
+  static const int cg_Nc = 128;
+..\Core\Src\AES128.c: 1 warning, 0 errors
+compiling DeviceCtrol.c...
+../Core/Inc/DeviceCtrol.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Core\Src\DeviceCtrol.c: 1 warning, 0 errors
+compiling gpio.c...
+compiling MyCallbackFunc.c...
+compiling AS608.c...
+..\Core\Src\AS608.c(823): warning:  #177-D: variable "flag"  was declared but never referenced
+  	uint8_t flag=0;
+..\Core\Src\AS608.c: 1 warning, 0 errors
+compiling syn6288.c...
+compiling stm32f4xx_it.c...
+compiling tim.c...
+compiling stm32f4xx_hal_msp.c...
+compiling stm32f4xx_ll_adc.c...
+compiling usart.c...
+compiling adc.c...
+compiling TX510.c...
+../Core/Inc/TX510.h(42): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Core\Src\TX510.c(51): warning:  #177-D: variable "temp"  was declared but never referenced
+  	uint16_t temp=2000;
+..\Core\Src\TX510.c(53): warning:  #177-D: variable "SUM"  was declared but never referenced
+  	uint8_t SUM=0;
+..\Core\Src\TX510.c(54): warning:  #177-D: variable "id_str"  was declared but never referenced
+  	char *id_str;
+..\Core\Src\TX510.c(136): warning:  #550-D: variable "temp"  was set but never used
+  	uint8_t temp=0;
+..\Core\Src\TX510.c(378): warning:  #1-D: last line of file ends without a newline
+  }
+..\Core\Src\TX510.c(29): warning:  #177-D: function "SendCmd"  was declared but never referenced
+  static void SendCmd(uint8_t cmd)
+..\Core\Src\TX510.c: 7 warnings, 0 errors
+compiling stm32f4xx_hal_adc.c...
+compiling stm32f4xx_hal_flash_ex.c...
+compiling stm32f4xx_hal_rcc.c...
+compiling stm32f4xx_hal_flash.c...
+compiling stm32f4xx_hal_rcc_ex.c...
+compiling stm32f4xx_hal_gpio.c...
+compiling stm32f4xx_hal_flash_ramfunc.c...
+compiling stm32f4xx_hal_adc_ex.c...
+compiling stm32f4xx_hal_dma.c...
+compiling stm32f4xx_hal.c...
+compiling stm32f4xx_hal_pwr.c...
+compiling stm32f4xx_hal_pwr_ex.c...
+compiling stm32f4xx_hal_exti.c...
+compiling stm32f4xx_hal_cortex.c...
+compiling stm32f4xx_hal_dma_ex.c...
+compiling system_stm32f4xx.c...
+compiling stm32f4xx_hal_tim_ex.c...
+compiling stm32f4xx_hal_uart.c...
+compiling stm32f4xx_hal_tim.c...
+linking...
+Program Size: Code=16366 RO-data=722 RW-data=60 ZI-data=3124  
+FromELF: creating hex file...
+"Car_Terminal\Car_Terminal.axf" - 0 Error(s), 14 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM::CMSIS@5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack
+                Keil::STM32F4xx_DFP@2.17.1
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Car_Terminal
+  D:/SoftWare/MDK/PACK/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  D:/SoftWare/MDK/PACK/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@5.6.0
+Build Time Elapsed:  00:00:21
+</pre>
+</body>
+</html>
